@@ -139,26 +139,13 @@
                 </div>
               </div>
               <div>
-                <div bind="e151e244-d06a-d34c-9e72-b3f56d10d30e" udy-el="loop-add-to-cart">
-                  <form data-node-type="commerce-add-to-cart-form" template-bind="e151e244-d06a-d34c-9e72-b3f56d10d30f" bind="e151e244-d06a-d34c-9e72-b3f56d10d30f" class="w-commerce-commerceaddtocartform" action="/cart/add"><label for="quantity-5db26fcb9782007bc8ab80a90ef">{{ 'collection.LABEL_20' | t }}</label>
-                    <div class="div-block-308"><input type="number" pattern="^[0-9]+$" inputmode="numeric" id="quantity-5db26fcb9782007bc8ab80a90ef47540" name="quantity" min="1" bind="e151e244-d06a-d34c-9e72-b3f56d10d31a" class="w-commerce-commerceaddtocartquantityinput quantity-6" value="1"><input type="submit" data-node-type="commerce-add-to-cart-button" data-loading-text="Adding to cart..." value="Add to Cart" class="w-commerce-commerceaddtocartbutton solidbluebutton-2">
-                      <a href="/404" data-node-type="commerce-buy-now-button" data-default-text="Buy now" data-subscription-text="Subscribe now" style="display:none" class="w-commerce-commercebuynowbutton">{{ 'collection.A_21' | t }}</a>
-                    </div>
-                  <input type="hidden" name="id" value="{{ product.variants.first.id }}"></form>
-                  <div bind="e151e244-d06a-d34c-9e72-b3f56d10d31d" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
-                    <div>{{ 'collection.DIV_22' | t }}</div>
-                  </div>
-                  <div bind="e151e244-d06a-d34c-9e72-b3f56d10d320" data-node-type="commerce-add-to-cart-error" style="display:none" class="w-commerce-commerceaddtocarterror" udy-el="add-to-cart-errors">
-                    <div bind="e151e244-d06a-d34c-9e72-b3f56d10d321" data-node-type="commerce-add-to-cart-error" data-w-add-to-cart-quantity-error="Product is not available in this quantity." data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart." data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription." data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item." data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site." data-w-add-to-cart-select-all-options-error="Please select an option in each set.">{{ 'collection.DIV_23' | t }}</div>
-                  </div>
-                </div>
-                <a href="{{ product.url | within: collection.url }}" class="solid-blue-button-2 w-button">{{ 'collection.A_24' | t }}</a>
+                <a href="{{ product.url | within: collection.url }}" class="solid-blue-button-2 w-button">{{ 'collection.A_20' | t }}</a>
               </div>
             </div>
           </div>{% endfor %}
         </div>
         {% if collection.products == empty %}<div bind="c40d2519-1455-60bc-b316-ae639e9d13c7" class="w-dyn-empty">
-          <div>{{ 'collection.DIV_25' | t }}</div>
+          <div>{{ 'collection.DIV_21' | t }}</div>
         </div>{% endif %}
       </div>{% endpaginate %}
     </div>
@@ -168,32 +155,32 @@
       <div class="grey-divider"></div>
       <div class="w-layout-grid footer-grid">
         <div class="footer-link-column-2">
-          <div class="footer-link-title">{{ 'collection.DIV_26' | t }}</div>
-          <a href="/pages/faq" class="footer-link">{{ 'collection.A_27' | t }}</a>
-          <a href="/pages/become-a-wholesaler" class="footer-link">{{ 'collection.A_28' | t }}</a>
-          <a href="/pages/support" class="footer-link">{{ 'collection.A_29' | t }}</a>
-          <a href="/account/login" class="footer-link">{{ 'collection.A_30' | t }}</a>
-          <a href="/account/register" class="footer-link">{{ 'collection.A_31' | t }}</a>
-          <a href="/blogs/news" class="footer-link">{{ 'collection.A_32' | t }}</a>
+          <div class="footer-link-title">{{ 'collection.DIV_22' | t }}</div>
+          <a href="/pages/faq" class="footer-link">{{ 'collection.A_23' | t }}</a>
+          <a href="/pages/become-a-wholesaler" class="footer-link">{{ 'collection.A_24' | t }}</a>
+          <a href="/pages/support" class="footer-link">{{ 'collection.A_25' | t }}</a>
+          <a href="/account/login" class="footer-link">{{ 'collection.A_26' | t }}</a>
+          <a href="/account/register" class="footer-link">{{ 'collection.A_27' | t }}</a>
+          <a href="/blogs/news" class="footer-link">{{ 'collection.A_28' | t }}</a>
         </div>
         <div class="footer-link-column-2">
-          <div class="footer-link-title">{{ 'collection.DIV_33' | t }}</div>
-          <a href="/pages/refund-policy" class="footer-link">{{ 'collection.A_34' | t }}</a>
-          <a href="/pages/environmental-policy" class="footer-link">{{ 'collection.A_35' | t }}</a>
-          <a href="/pages/privacy-policy" class="footer-link">{{ 'collection.A_36' | t }}</a>
-          <a href="/pages/terms-of-service" class="footer-link">{{ 'collection.A_37' | t }}</a>
+          <div class="footer-link-title">{{ 'collection.DIV_29' | t }}</div>
+          <a href="/pages/refund-policy" class="footer-link">{{ 'collection.A_30' | t }}</a>
+          <a href="/pages/environmental-policy" class="footer-link">{{ 'collection.A_31' | t }}</a>
+          <a href="/pages/privacy-policy" class="footer-link">{{ 'collection.A_32' | t }}</a>
+          <a href="/pages/terms-of-service" class="footer-link">{{ 'collection.A_33' | t }}</a>
         </div>
         <div class="footer-link-column">
-          <div class="footer-link-title">{{ 'collection.DIV_38' | t }}</div>
+          <div class="footer-link-title">{{ 'collection.DIV_34' | t }}</div>
           <a href="http://www.botanicalwater.org/" target="_blank" class="w-inline-block"><img src="{{ '5b22537925fc062336f52e88_BWF-Logo-White.png' | asset_url }}" loading="lazy" alt="botanical water foundation logo white" class="image-56"></a>
         </div>
         <div class="footer-link-column-2">
-          <div class="footer-link-title">{{ 'collection.DIV_39' | t }}</div>
-          <a href="#" class="footer-link">{{ 'collection.A_40' | t }}</a>
+          <div class="footer-link-title">{{ 'collection.DIV_35' | t }}</div>
+          <a href="#" class="footer-link">{{ 'collection.A_36' | t }}</a>
           <div class="news-block w-form {% if form.posted_successfully? %}udy-form-posted-successfully{% endif %}">{% form 'customer' %}
             <form id="wf-form-Subscribe" name="wf-form-Subscribe" method="post" class="form-2"><div udesly-add-class="form-2"></div><input type="email" class="email-field w-input" maxlength="256" name="contact[email]" placeholder="Email address" id="email" required=""><input type="submit" value="🚀" data-wait="Please wait..." data-w-id="73a00406-2a42-bb7c-c23e-feddbad776ac" class="newsletter-blue w-button">{% include 'general-forms', form %}</form>
             <div class="success-message-3 w-form-done {% if form.posted_successfully? %}udy-form-success-message{% endif %}">
-              <div>{{ 'collection.DIV_41' | t }}</div>
+              <div>{{ 'collection.DIV_37' | t }}</div>
             </div>
             <div class="error-message-3 w-form-fail {% if form.errors %}udy-form-has-errors{% endif %}">
               <div>{% include 'form-errors' %}</div>
@@ -206,7 +193,7 @@
   <div bind="b89ebf75-64bc-30df-ee93-523f10b53aa4" class="footer-footer">
     <div class="w-layout-grid footer1-bottom-grid">
       <div id="w-node-b89ebf75-64bc-30df-ee93-523f10b53aa6-10b53aa4" class="div-block-18">
-        <div bind="dd65958b-0278-eb91-ce01-679143d7ff2b" class="footer1-bottom-link w-embed w-script">{{ 'collection.DIV_42' | t }}<script>document.write(new Date().getFullYear());</script>{{ 'collection.DIV_43' | t }}</div>
+        <div bind="dd65958b-0278-eb91-ce01-679143d7ff2b" class="footer1-bottom-link w-embed w-script">{{ 'collection.DIV_38' | t }}<script>document.write(new Date().getFullYear());</script>{{ 'collection.DIV_39' | t }}</div>
         <div class="footer-spacer"></div>
       </div>
       <div class="div-block-18">
