@@ -1,0 +1,1 @@
+<select id="product-select-{{ forloop.index }}" name="id" class="w-select" data-udy-element="single-option-selector" style="{% if product.variants.size < 2 %}display: none;{% endif %}">{% include 'product-options' %}</select>

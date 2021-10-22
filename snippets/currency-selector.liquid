@@ -1,0 +1,20 @@
+{% form 'currency' %}
+<div udesly-add-class="{{ f }}"></div>
+  <select name="currency" class="{{ s }}">
+    {% for currency in shop.enabled_currencies %}
+      {% if currency == cart.currency %}
+        <option selected="true">{{currency.iso_code}}</option>
+      {% else %}
+        <option>{{currency.iso_code}}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+{% endform %}
+
+<script>
+    document.querySelectorAll('select[name="currency"]').forEach( function(select) {
+        select.addEventListener('change', function(e) {
+            select.closest('form').submit();
+        });
+    });
+</script>

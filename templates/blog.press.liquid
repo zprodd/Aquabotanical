@@ -1,0 +1,205 @@
+{% layout 'blog_press' %}
+      
+  <a href="/collections/subscriptons" class="banner-bar w-inline-block">
+    <div class="banner-wrap">
+      <p class="announcement-bar-text">{{ 'blog_press.P_0' | t }}<strong class="bold-text">{{ 'blog_press.STRONG_1' | t }}</strong>{{ 'blog_press.P_2' | t }}</p>
+    </div>
+  </a>
+  <div data-collapse="medium" data-animation="over-right" data-duration="400" bind="2c866d2c-40f0-3cd3-2bf4-1a5885c69c6b" data-easing="ease" data-easing2="ease" role="banner" class="nav03 w-nav">
+    <div class="nav03_container">
+      <div class="nav03_left">
+        <a href="/" class="nav03_logo w-nav-brand"><img src="{{ 'AquaB-Logo-Blue.svg' | asset_url }}" width="140" option:image="Logo" alt="" class="nav03_logo_image"></a>
+      </div>
+      <nav role="navigation" class="nav03_links w-nav-menu">
+        <a href="/" class="nav03_link w-nav-link">{{ 'blog_press.A_3' | t }}</a>
+        <a href="/collections/try-now" class="nav03_link mobile w-nav-link">{{ 'blog_press.A_4' | t }}</a>
+        <a href="/collections/subscriptions" class="nav03_link mobile w-nav-link">{{ 'blog_press.A_5' | t }}</a>
+        <a href="/#how" class="nav03_link w-nav-link">{{ 'blog_press.A_6' | t }}</a>
+        <a href="/#why" class="nav03_link w-nav-link">{{ 'blog_press.A_7' | t }}</a>
+        <div class="social-menu-mobile">
+          <div class="footer-link-title">{{ 'blog_press.DIV_8' | t }}</div>
+          <div class="f01_social_wrap">
+            <a href="https://www.instagram.com/aqua_botanical/" target="_blank" class="social-circle w-inline-block"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab8148372fe82ddfad1_instagram.svg" alt="" class="f01_social_icon"></a>
+            <a href="https://www.facebook.com/AquaBotanicalWater" target="_blank" class="social-circle w-inline-block"><img src="{{ 'forest_facebook.svg' | asset_url }}" alt="facebook logo" class="f01_social_icon"></a>
+            <a href="https://www.linkedin.com/company/aquabotanical/" target="_blank" class="social-circle w-inline-block"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab81483725528ddfacc_linkedin.svg" alt="" class="f01_social_icon"></a>
+          </div>
+        </div>
+      </nav>
+      <div class="nav03_right">
+        <div class="nav03_menu_button-2 w-nav-button">
+          <div class="nav03_icon w-icon-nav-menu"></div>
+        </div>
+        <div class="subscribe-button-wrap nav">
+          <a href="/collections/try" class="solidbluebutton header outline w-button">{{ 'blog_press.A_9' | t }}</a>
+          <div class="div-block-143"></div>
+          <a data-w-id="2c866d2c-40f0-3cd3-2bf4-1a5885c69c7b" href="/collections/subscriptions" class="solidbluebutton w-button">{{ 'blog_press.A_10' | t }}</a>
+          <div class="div-block-156"></div>
+        </div>
+        <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="modal" data-wf-cart-query="" data-wf-page-link-href-prefix="" class="w-commerce-commercecartwrapper minicart">
+          <a href="#" data-node-type="commerce-cart-open-link" class="w-commerce-commercecartopenlink cart-button-2 w-inline-block"><img src="{{ 'shopping-bag-dark.svg' | asset_url }}" alt="shopping bag dark" class="cart-icon-2">
+            <div class="icon-nav-bg"></div>
+            <div style="display:none" data-count-hide-rule="empty" class="w-commerce-commercecartopenlinkcount cart-quantity-2" udy-el="cart-count">{{ cart.item_count }}</div>
+          </a>
+          <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal cart-wrapper">
+            <div data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container-2">
+              <div class="w-commerce-commercecartheader cart-header">
+                <h4 class="w-commerce-commercecartheading cart-header">{{ 'blog_press.H4_11' | t }}</h4>
+                <a href="#" data-node-type="commerce-cart-close-link" class="w-commerce-commercecartcloselink w-inline-block">
+                  <div class="close-popup"></div>
+                </a>
+              </div>
+              <div class="w-commerce-commercecartformwrapper">
+                <form data-node-type="commerce-cart-form" class="w-commerce-commercecartform {% if cart.item_count == 0 %}udesly-display-none{% endif %}">
+                  <ul role="list" class="mini-cart-list" udy-el="items-list">
+                    {% for item in cart.items %}<li class="mini-cart-list-item">
+                      <div class="mini-cart-image"><img src="{{ item | img_url: 'large' }}" loading="lazy" alt="{{ item.alt }}"></div>
+                      <div class="div-block-310">
+                        <div class="div-block-309">
+                          <a href="{{ item.product.url }}" class="product-list-title">{{ item.product.title }}</a>
+                          <div class="subscription"></div>
+                          <div class="product-price in-card">{{ item.price | money }}</div>
+                          <a href="/cart/change?line={{ forloop.index }}&amp;amp;quantity=0" class="remove-button w-inline-block" udy-el="remove-item">
+                            <div>{{ 'blog_press.DIV_12' | t }}</div>
+                          </a>
+                        </div>
+                        <div class="div-block-311">
+                          <a href="#" class="button-9 w-button" udy-el="quantity-minus">{{ 'blog_press.A_13' | t }}</a>
+                          <input class="udesly-fake-number-input quantity input" type="number" name="updates[{{ item.key }}]" id="updates_{{ item.key }}" data-line="{{ forloop.index }}" min="1" value="{{ item.quantity }}" data-inventory-policy="{{ item.variant.inventory_policy }}" data-inventory-quantity="{{ item.variant.inventory_quantity }}">
+                          <a href="#" class="button-10 w-button" udy-el="quantity-plus">{{ 'blog_press.A_14' | t }}</a>
+                        </div>
+                      </div>
+                    </li>{% endfor %}
+                  </ul>
+                  
+                  
+                  <div class="w-commerce-commercecartfooter {% if cart.item_count == 0 %}udesly-display-none{% endif %}" udy-el="cart-actions">
+                    <div class="w-commerce-commercecartlineitem">
+                      <div>{{ 'blog_press.DIV_15' | t }}</div>
+                      <div class="w-commerce-commercecartordervalue product-price product-page" udy-el="cart-total">{{ cart.total_price | money }}</div>
+                    </div>
+                    <div class="checkout-actions">
+                      <a href="/checkout" value="Continue to Checkout" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton solidbluebutton" data-loading-text="Hang Tight...">{{ 'blog_press.A_16' | t }}</a>
+                    </div>
+                  </div>
+                </form>
+                <div class="w-commerce-commercecartemptystate {% if cart.item_count != 0 %}udesly-display-none{% endif %}" udy-el="no-items-in-cart">
+                  <div>{{ 'blog_press.DIV_17' | t }}</div>
+                </div>
+                <div style="display:none" data-node-type="commerce-cart-error" class="w-commerce-commercecarterrorstate">
+                  <div class="w-cart-error-msg" data-w-cart-quantity-error="Product is not available in this quantity." data-w-cart-general-error="Something went wrong when adding this item to the cart." data-w-cart-checkout-error="Checkout is disabled on this site." data-w-cart-cart_order_min-error="Cart failed." data-w-cart-subscription_error-error="Cart failed.">{{ 'blog_press.DIV_18' | t }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <script id="mini-cart-template">
+          window.udeslyMiniCartTemplate = function(item) {
+            return `<li class="mini-cart-list-item" data-item-id="${item.id}">
+                      <div class="mini-cart-image"><img src="${item.image}" loading="lazy" alt=""></div>
+                      <div class="div-block-310">
+                        <div class="div-block-309">
+                          <a href="#" class="product-list-title">${item.product_title}</a>
+                          <div class="subscription"></div>
+                          <div class="product-price in-card">${item.price}</div>
+                          <a href="${item.remove}" class="remove-button w-inline-block" udy-el="remove-item">
+                            <div>Remove</div>
+                          </a>
+                        </div>
+                        <div class="div-block-311">
+                          <a href="#" class="button-9 w-button" udy-el="quantity-minus">-</a>
+                          <input class="udesly-fake-number-input quantity input" type="number" name="updates[${item.id}]" id="updates_${item.id}" data-line="${item.line}" min="1" value="${item.quantity}">
+                          <a href="#" class="button-10 w-button" udy-el="quantity-plus">+</a>
+                        </div>
+                      </div>
+                    </li>`
+          }
+          </script></div>
+      </div>
+    </div>
+  </div>
+  <div class="faq01">
+    <div class="container-6 w-container">
+      <div class="faq01_title_wrap">
+        <p class="faq01_title">{{ 'blog_press.P_19' | t }}</p>
+        <h3 class="faq01_h3">{% include 'blog-title' %}</h3>
+      </div>
+      {% paginate blog.articles by settings.blog_posts_limit %}<div class="w-dyn-list">
+        <div bind="bca6b870-5e7b-bd4e-5986-2cf9b71f27c5" role="list" class="w-dyn-items">
+          {% for article in blog.articles %}<div bind="bca6b870-5e7b-bd4e-5986-2cf9b71f27c6" role="listitem" class="w-dyn-item">
+            <a href="{{ article.url }}" class="blog-item w-inline-block">
+              <div class="blog-image-wrap"><img src="{{ article | img_url: 'large' }}" width="380" alt="{{ article.alt }}" class="blog-image"></div>
+              <div class="blog-content">
+                <h3 class="small-press-heading">{{ article.title }}</h3>
+                <p class="paragraph-detials-small">{{ article.published_at | date: 'featured-image' }}</p>
+                <div class="grey-line spacing"></div>
+                <p class="paragraph-detials-medium">{% include 'blog-post-excerpt' %}</p><img src="" width="160" bind="e7c76bee-d1e0-ecff-d424-2ab82624baa7" alt="" class="press-logo">
+              </div>
+            </a>
+          </div>{% endfor %}
+        </div>
+        {% if blog.articles_count == 0 %}<div bind="bca6b870-5e7b-bd4e-5986-2cf9b71f27c7" class="w-dyn-empty">
+          <div>{{ 'blog_press.DIV_20' | t }}</div>
+        </div>{% endif %}
+      </div>{% endpaginate %}
+    </div>
+  </div>
+  <div bind="936351d0-b2b0-ab2e-c8e5-7948d8285d5b" class="footer-section">
+    <div class="container-13"><img src="{{ 'AquaB-Logo-White.svg' | asset_url }}" loading="lazy" alt="" class="logo">
+      <div class="grey-divider"></div>
+      <div class="w-layout-grid footer-grid">
+        <div class="footer-link-column-2">
+          <div class="footer-link-title">{{ 'blog_press.DIV_21' | t }}</div>
+          <a href="/pages/faq" class="footer-link">{{ 'blog_press.A_22' | t }}</a>
+          <a href="/pages/become-a-wholesaler" class="footer-link">{{ 'blog_press.A_23' | t }}</a>
+          <a href="/pages/support" class="footer-link">{{ 'blog_press.A_24' | t }}</a>
+          <a href="/account/login" class="footer-link">{{ 'blog_press.A_25' | t }}</a>
+          <a href="/account/register" class="footer-link">{{ 'blog_press.A_26' | t }}</a>
+          <a href="/blogs/news" aria-current="page" class="footer-link w--current">{{ 'blog_press.A_27' | t }}</a>
+        </div>
+        <div class="footer-link-column-2">
+          <div class="footer-link-title">{{ 'blog_press.DIV_28' | t }}</div>
+          <a href="/pages/refund-policy" class="footer-link">{{ 'blog_press.A_29' | t }}</a>
+          <a href="/pages/environmental-policy" class="footer-link">{{ 'blog_press.A_30' | t }}</a>
+          <a href="/pages/privacy-policy" class="footer-link">{{ 'blog_press.A_31' | t }}</a>
+          <a href="/pages/terms-of-service" class="footer-link">{{ 'blog_press.A_32' | t }}</a>
+        </div>
+        <div class="footer-link-column">
+          <div class="footer-link-title">{{ 'blog_press.DIV_33' | t }}</div>
+          <a href="http://www.botanicalwater.org/" target="_blank" class="w-inline-block"><img src="{{ '5b22537925fc062336f52e88_BWF-Logo-White.png' | asset_url }}" loading="lazy" alt="botanical water foundation logo white" class="image-56"></a>
+        </div>
+        <div class="footer-link-column-2">
+          <div class="footer-link-title">{{ 'blog_press.DIV_34' | t }}</div>
+          <a href="#" class="footer-link">{{ 'blog_press.A_35' | t }}</a>
+          <div class="news-block w-form {% if form.posted_successfully? %}udy-form-posted-successfully{% endif %}">{% form 'customer' %}
+            <form id="wf-form-Subscribe" name="wf-form-Subscribe" method="post" class="form-2"><div udesly-add-class="form-2"></div><input type="email" class="email-field w-input" maxlength="256" name="contact[email]" placeholder="Email address" id="email" required=""><input type="submit" value="🚀" data-wait="Please wait..." data-w-id="73a00406-2a42-bb7c-c23e-feddbad776ac" class="newsletter-blue w-button">{% include 'general-forms', form %}</form>
+            <div class="success-message-3 w-form-done {% if form.posted_successfully? %}udy-form-success-message{% endif %}">
+              <div>{{ 'blog_press.DIV_36' | t }}</div>
+            </div>
+            <div class="error-message-3 w-form-fail {% if form.errors %}udy-form-has-errors{% endif %}">
+              <div>{% include 'form-errors' %}</div>
+            </div>
+          </div>{% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div bind="b89ebf75-64bc-30df-ee93-523f10b53aa4" class="footer-footer">
+    <div class="w-layout-grid footer1-bottom-grid">
+      <div id="w-node-b89ebf75-64bc-30df-ee93-523f10b53aa6-10b53aa4" class="div-block-18">
+        <div bind="dd65958b-0278-eb91-ce01-679143d7ff2b" class="footer1-bottom-link w-embed w-script">{{ 'blog_press.DIV_37' | t }}<script>document.write(new Date().getFullYear());</script>{{ 'blog_press.DIV_38' | t }}</div>
+        <div class="footer-spacer"></div>
+      </div>
+      <div class="div-block-18">
+        <div class="f01_social_wrap">
+          <a href="https://www.instagram.com/aqua_botanical/" target="_blank" class="social-circle w-inline-block"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab8148372fe82ddfad1_instagram.svg" alt="" class="f01_social_icon"></a>
+          <a href="https://www.facebook.com/AquaBotanicalWater" target="_blank" class="social-circle w-inline-block"><img src="{{ 'forest_facebook.svg' | asset_url }}" alt="facebook logo" class="f01_social_icon"></a>
+          <a href="https://www.linkedin.com/company/aquabotanical/" target="_blank" class="social-circle w-inline-block"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab81483725528ddfacc_linkedin.svg" alt="" class="f01_social_icon"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% section 'stickyfooter' %}
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=61530d352ea7cd652527263a" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="{{ 'webflow.js' | asset_url }}" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+{% include 'notifications' %}{{ 'udesly-shopify.min.js' | asset_url | script_tag }}{{ 'option_selection.js' | shopify_asset_url | script_tag }}

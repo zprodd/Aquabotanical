@@ -1,0 +1,5 @@
+{% if cart.total_discounts > 0 %}
+     {{ cart.total_discounts | money }}
+    {% else %}
+     {{ 0 | money }}
+{% endif %}

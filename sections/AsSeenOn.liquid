@@ -1,0 +1,79 @@
+
+
+    <div class="c05_container">
+      <div class="subheadings">{{ section.settings.heading }}</div>
+      <div class="logo-wrapper">
+        <a href="{{ section.settings.url1 }}" target="_blank" class="w-inline-block"><img src="{{ section.settings.logo1 | img_url: 'large' }}" loading="lazy" width="95" alt="{{ section.settings.logo1.alt }}" class="company-logo"></a>
+        <a href="{{ section.settings.url2 }}" target="_blank" class="w-inline-block"><img src="{{ section.settings.logo2 | img_url: 'large' }}" loading="lazy" width="135" alt="{{ section.settings.logo2.alt }}" class="company-logo"></a>
+        <a href="{{ section.settings.url3 }}" target="_blank" class="w-inline-block"><img src="{{ section.settings.logo3 | img_url: 'large' }}" loading="lazy" width="95" alt="{{ section.settings.logo3.alt }}" class="company-logo"></a>
+        <a href="{{ section.settings.url4 }}" target="_blank" class="w-inline-block"><img src="{{ section.settings.logo4 | img_url: 'large' }}" loading="lazy" width="145" alt="{{ section.settings.logo4.alt }}" class="company-logo"></a>
+      </div>
+      <div class="div-block-146"></div>
+      <a href="/blogs/news" class="c06_link w-inline-block">
+        <div class="c06_link_text">{{ section.settings.seemore }}</div><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab81483720a39ddfbaa_Icon.svg" alt="" class="c06_link_arrow">
+      </a>
+    </div>
+  
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("block","logo");currentSection.setAttribute("bind","7230adaa-b509-4b94-ce2e-29a7e2215793");currentSection.setAttribute("class","as-seen-on wf-section");</script>
+
+{% schema %}
+{
+  "name": "AsSeenOn",
+  "class": "as-seen-on wf-section",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "heading",
+      "default": "As Seen On"
+    },
+    {
+      "type": "text",
+      "id": "seemore",
+      "label": "SeeMore",
+      "default": "See More Press"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo1",
+      "label": "logo1"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo2",
+      "label": "logo2"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo3",
+      "label": "logo3"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo4",
+      "label": "logo4"
+    },
+    {
+      "type": "url",
+      "id": "url1",
+      "label": "url1"
+    },
+    {
+      "type": "url",
+      "id": "url2",
+      "label": "url2"
+    },
+    {
+      "type": "url",
+      "id": "url3",
+      "label": "url3"
+    },
+    {
+      "type": "url",
+      "id": "url4",
+      "label": "url4"
+    }
+  ]
+}
+{% endschema %}

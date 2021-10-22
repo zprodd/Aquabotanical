@@ -1,0 +1,13 @@
+{%- assign property_size = item.options_with_values | size -%}
+
+              {% if property_size > 0 %}
+              {% unless item.product.has_only_default_variant %}
+                {% for p in item.options_with_values %}
+                <div class="udy-property-line">
+                  <span class="udy-property-name">{{ p.name }}:</span>
+                    <span class="udy-property-value">{{ p.value }}</span>
+                  </div>
+                {% endfor %}
+              
+              {% endunless %}
+              {% endif %}

@@ -1,0 +1,6 @@
+<div style="display: none;"><select id="product-select-{{product.id}}" name="id" class="w-select" data-udy-element="single-option-selector">{% include 'product-options' %}</select>  </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      new Shopify.OptionSelectors("product-select-{{product.id}}", { product: {{ product | json }} });
+  });
+</script>

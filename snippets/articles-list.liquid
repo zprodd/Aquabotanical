@@ -1,0 +1,5 @@
+{% if reverse %}
+{%- assign current_articles = blogs[blog].articles | sort: sort | reverse -%}
+{% else %}
+{%- assign current_articles = blogs[blog].articles | sort: sort -%}
+{% endif %}

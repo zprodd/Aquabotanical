@@ -1,0 +1,7 @@
+ {% if item.excerpt.size > 0 %}
+        {{ item.excerpt }}
+    {% else %}
+      <p>
+          {{ item.content | strip_html | truncatewords: 100 }}
+      </p>
+{% endif %}

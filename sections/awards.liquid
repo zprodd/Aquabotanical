@@ -1,0 +1,43 @@
+
+
+    <div class="c05_container">
+      <div class="subheadings">Awards</div>
+      <div class="w-layout-grid grid-4">
+        <div><img src="{{ section.settings.logo1 | img_url: 'large' }}" loading="lazy" width="115" alt="{{ section.settings.logo1.alt }}" class="company-logo"></div>
+        <div><img src="{{ section.settings.logo2 | img_url: 'large' }}" loading="lazy" width="125" alt="{{ section.settings.logo2.alt }}" class="company-logo"></div>
+        <div><img src="{{ section.settings.logo3 | img_url: 'large' }}" loading="lazy" width="115" alt="{{ section.settings.logo3.alt }}" class="company-logo"></div>
+        <div><img src="{{ section.settings.logo4 | img_url: 'large' }}" loading="lazy" width="115" alt="{{ section.settings.logo4.alt }}" class="company-logo"></div>
+      </div>
+    </div>
+  
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","as-seen-on wf-section");</script>
+
+{% schema %}
+{
+  "name": "awards",
+  "class": "as-seen-on wf-section",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo1",
+      "label": "Logo1"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo2",
+      "label": "Logo2"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo3",
+      "label": "Logo3"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo4",
+      "label": "Logo4"
+    }
+  ]
+}
+{% endschema %}

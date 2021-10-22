@@ -1,0 +1,17 @@
+          {% if product.compare_at_price > product.price %}
+
+                 {% if product.compare_at_price_varies %}
+					<s>{{ product.compare_at_price_max | money }}</s> - {{ product.price | money }}
+                 {% else %}
+					<s>{{product.compare_at_price | money }}</s> - {{ product.price | money }}
+                 {% endif %}
+
+          {% else %}
+
+            {% if product.price_varies %}
+               {{ product.price_min | money }} - {{ product.price_max | money }}
+            {% else %}
+              {{ product.price | money }}
+            {% endif %}
+
+          {% endif %}

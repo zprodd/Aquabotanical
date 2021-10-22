@@ -1,0 +1,90 @@
+
+
+    <div class="c05_container">
+      <div class="subheadings">{{ section.settings.subheading }}</div>
+      <h2 class="headings">We <span class="text-span-4">Grow</span> Water<span class="c05_focus"></span><span class="focus_blue"></span></h2>
+      <div class="w-layout-grid steps-grid">
+        <div class="steps-cards">
+          <h3 class="faq01_h3" style="background-image: url({{ section.settings.image1 | img_url: 'large' }})">🥕</h3>
+          <p class="h11_title-2">{{ section.settings.title1 }}</p>
+          <p>{{ section.settings.paragraph1 }}</p>
+        </div>
+        <div class="steps-cards">
+          <h3 class="faq01_h3" style="background-image: url({{ section.settings.image2 | img_url: 'large' }})">🚰</h3>
+          <p class="h11_title-2">{{ section.settings.title2 }}</p>
+          <p>{{ section.settings.paragraph2 }}</p>
+        </div>
+        <div class="steps-cards">
+          <h3 class="faq01_h3" style="background-image: url({{ section.settings.image3 | img_url: 'large' }})">🚀</h3>
+          <p class="h11_title-2">{{ section.settings.title3 }}</p>
+          <p>{{ section.settings.paragraph3 }}</p>
+        </div>
+      </div>
+    </div>
+  
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","we-grow-water wf-section");</script>
+
+{% schema %}
+{
+  "name": "WeGrowWater",
+  "class": "we-grow-water wf-section",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "subheading",
+      "default": "AquaBotanical"
+    },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "title1",
+      "default": "Step 1"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "title2",
+      "default": "Step 2"
+    },
+    {
+      "type": "text",
+      "id": "title3",
+      "label": "title3",
+      "default": "Step 3"
+    },
+    {
+      "type": "text",
+      "id": "paragraph3",
+      "label": "paragraph3",
+      "default": "Finally, we add in 74 plant-based minerals to create sustainable and healthy drinking water for the world to enjoy"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph1",
+      "label": "Paragraph1"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph2",
+      "label": "paragraph2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "image1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image3"
+    }
+  ]
+}
+{% endschema %}

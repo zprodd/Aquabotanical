@@ -1,0 +1,55 @@
+
+
+      <div class="testimonial-container">
+        <div class="w-layout-grid testimonial-grid">
+          <div id="w-node-_8211d307-e98f-7367-7df0-a44b5f1ad0b7-2127263b" class="content-wrapper">
+            <div bind="1f417f21-1ef7-6544-e2b0-f8e25a42fbff" class="title _8-bottom-margin">Turning plants into purified water</div>
+            <h3 class="h04_h1">How it is <span class="text-span-6">Made</span> </h3>
+            <p>From fruit and vegetables to clean and refreshing drinking water, here’s exactly how AquaBotanical water is made.</p>
+            <div bind="f045efa7-fb3a-8f2c-bd7c-1a212809aa15" class="subscribe-button-wrap">
+              <a data-w-id="f045efa7-fb3a-8f2c-bd7c-1a212809aa16" href="{{ section.settings.sub_and_save }}" class="solidbluebutton w-button">Subscribe &amp; Save</a>
+              <a href="/collections/try-now" class="c06_link w-inline-block">
+                <div class="c06_link_text" href="{{ section.settings.trynow }}">or <span class="link">Try Now</span></div><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab81483720a39ddfbaa_Icon.svg" alt="" class="c06_link_arrow">
+              </a>
+            </div>
+          </div>
+          <div class="video-base">
+            <div data-poster-url="https://uploads-ssl.webflow.com/60ef97e8fbeb5351e1cc2177/613d8b6a08810739ca00c3ab_BW_Social_How_SQUARE_'LEAVE'_MASTER-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/61530d352ea7cd652527263a/61530d352ea7cdf2f1272965_BW_Social_How_SQUARE_%27LEAVE%27_MASTER-transcode.mp4,https://uploads-ssl.webflow.com/61530d352ea7cd652527263a/61530d352ea7cdf2f1272965_BW_Social_How_SQUARE_%27LEAVE%27_MASTER-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="square-video-player w-background-video w-background-video-atom"><video autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/60ef97e8fbeb5351e1cc2177/613d8b6a08810739ca00c3ab_BW_Social_How_SQUARE_'LEAVE'_MASTER-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://uploads-ssl.webflow.com/61530d352ea7cd652527263a/61530d352ea7cdf2f1272965_BW_Social_How_SQUARE_%27LEAVE%27_MASTER-transcode.mp4" data-wf-ignore="true">
+                <source src="https://uploads-ssl.webflow.com/61530d352ea7cd652527263a/61530d352ea7cdf2f1272965_BW_Social_How_SQUARE_%27LEAVE%27_MASTER-transcode.webm" data-wf-ignore="true">
+              </video>
+              <a href="{{ section.settings.url }}" class="video-lightbox-link-2 w-inline-block w-lightbox"><img src="https://uploads-ssl.webflow.com/60bac52fa85cd8650b1f78f1/60bacb65707f8fdefe1e8757_Play%20Icon.svg" loading="lazy" alt="" class="play-icon-2">
+                <script type="application/json" class="w-json">{"items":[{"type":"video","originalUrl":"https://vimeo.com/538533615","url":"https://vimeo.com/538533615","html":"<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F538533615%3Fapp_id%3D122963%26h%3De8da2cdff2&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F538533615&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1115013937_1280&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"529\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>","thumbnailUrl":"https://i.vimeocdn.com/video/1115013937_1280","width":940,"height":529}]}</script>
+              </a>
+            </div>
+          </div>
+        </div><img src="{{ 'Landscape-Animation-GIF.gif' | asset_url }}" loading="lazy" alt="landscape animation gif" class="diagram-gif-desktop"><img src="{{ 'Portrait-Diagram-v2.gif' | asset_url }}" loading="lazy" alt="" class="diagram-gif-mobile">
+        <div data-w-id="ae7650d7-cfcf-6f55-eb89-21722265c140" data-animation-type="lottie" data-src="{{ 'Aqua-Botanical_Portrait_FA-2.gif' | asset_url }}" data-loop="0" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-duration="0" class="lottie-mobile"></div>
+      </div>
+    
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("id","how");currentSection.setAttribute("class","testimonial-section");</script>
+
+{% schema %}
+{
+  "name": "testimonial",
+  "class": "testimonial-section",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "url",
+      "id": "sub_and_save",
+      "label": "Sub&Save"
+    },
+    {
+      "type": "url",
+      "id": "trynow",
+      "label": "trynow"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "url"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,107 @@
+<label for="AddressFirstName_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.first_name' | t }}
+    </label>
+    <input type="text"
+           name="address[first_name]"
+           id="AddressFirstName_{{address.id}}"
+           class="{{input_classes}}"
+           value="{{ form.first_name }}"
+           autocapitalize="words">
+
+    <label for="AddressLastName_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.last_name' | t }}
+    </label>
+    <input type="text"
+           name="address[last_name]"
+           id="AddressLastName_{{address.id}}"
+           class="{{input_classes}}"
+           value="{{ form.last_name }}"
+           autocapitalize="words">
+
+    <label for="AddressCompany_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.company' | t }}
+    </label>
+    <input type="text"
+           name="address[company]"
+           id="AddressCompany_{{address.id}}"
+           class="{{input_classes}}"
+           value="{{ form.company }}"
+           autocapitalize="words">
+
+    <label for="AddressAddress1_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.address1' | t }}
+    </label>
+    <input type="text"
+           name="address[address1]"
+           id="AddressAddress1_{{address.id}}"
+           class="{{input_classes}}"
+           value="{{ form.address1 }}"
+           autocapitalize="words">
+
+    <label for="AddressAddress2_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.address2' | t }}
+    </label>
+    <input type="text"
+           name="address[address2]"
+           id="AddressAddress2_{{address.id}}"
+           class="{{input_classes}}"
+           value="{{ form.address2 }}"
+           autocapitalize="words">
+
+    <label for="AddressCity_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.city' | t }}
+    </label>
+    <input type="text"
+           name="address[city]"
+           id="AddressCity_{{address.id}}"
+           class="{{input_classes}}"
+           value="{{ form.city }}"
+           autocapitalize="words">
+
+    <label for="AddressCountry_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.country' | t }}
+    </label>
+    <select
+      name="address[country]"
+      id="AddressCountry_{{address.id}}" class="{{select_classes}}"
+      data-default="{{ form.country }}">
+      {{ all_country_option_tags }}
+    </select>
+
+    <div id="AddressProvinceContainer_{{address.id}}" style="display: none">
+      <label for="AddressProvince_{{address.id}}" class="{{label_classes}}">
+        {{ 'general_addresses.province' | t }}
+      </label>
+      <select
+        name="address[province]"
+        id="AddressProvince_{{address.id}}" class="{{select_classes}}"
+        data-default="{{ form.province }}">
+      </select>
+    </div>
+
+    <label for="AddressZip_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.zip' | t }}
+    </label>
+    <input type="text"
+           name="address[zip]"
+           id="AddressZip_{{address.id}}"
+           class="{{input_classes}}"
+           value="{{ form.zip }}"
+           autocapitalize="characters">
+
+    <label for="AddressPhone_{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.phone' | t }}
+    </label>
+    <input type="tel"
+           name="address[phone]"
+           id="AddressPhone_{{address.id}}"
+           class="{{input_classes}}"
+           value="{{ form.phone }}"
+           pattern="[0-9\-]*">
+
+    {{ form.set_as_default_checkbox }}
+    <label for="address_default_address__{{address.id}}" class="{{label_classes}}">
+      {{ 'general_addresses.set_default' | t }}
+    </label>
+
+    <input type="submit" class="{{submit_classes}}" value="{{ 'general_addresses.update' | t }}">

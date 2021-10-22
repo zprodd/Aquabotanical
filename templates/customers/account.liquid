@@ -1,0 +1,432 @@
+{% layout 'customers_account' %}
+      
+  <a href="/collections/subscriptons" class="banner-bar w-inline-block">
+    <div class="banner-wrap">
+      <p class="announcement-bar-text">{{ 'customers_account.P_0' | t }}<strong class="bold-text">{{ 'customers_account.STRONG_1' | t }}</strong>{{ 'customers_account.P_2' | t }}</p>
+    </div>
+  </a>
+  <div data-collapse="medium" data-animation="over-right" data-duration="400" bind="2c866d2c-40f0-3cd3-2bf4-1a5885c69c6b" data-easing="ease" data-easing2="ease" role="banner" class="nav03 w-nav">
+    <div class="nav03_container">
+      <div class="nav03_left">
+        <a href="/" class="nav03_logo w-nav-brand"><img src="{{ 'AquaB-Logo-Blue.svg' | asset_url }}" width="140" option:image="Logo" alt="" class="nav03_logo_image"></a>
+      </div>
+      <nav role="navigation" class="nav03_links w-nav-menu">
+        <a href="/" class="nav03_link w-nav-link">{{ 'customers_account.A_3' | t }}</a>
+        <a href="/collections/try-now" class="nav03_link mobile w-nav-link">{{ 'customers_account.A_4' | t }}</a>
+        <a href="/collections/subscriptions" class="nav03_link mobile w-nav-link">{{ 'customers_account.A_5' | t }}</a>
+        <a href="/#how" class="nav03_link w-nav-link">{{ 'customers_account.A_6' | t }}</a>
+        <a href="/#why" class="nav03_link w-nav-link">{{ 'customers_account.A_7' | t }}</a>
+        <div class="social-menu-mobile">
+          <div class="footer-link-title">{{ 'customers_account.DIV_8' | t }}</div>
+          <div class="f01_social_wrap">
+            <a href="https://www.instagram.com/aqua_botanical/" target="_blank" class="social-circle w-inline-block"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab8148372fe82ddfad1_instagram.svg" alt="" class="f01_social_icon"></a>
+            <a href="https://www.facebook.com/AquaBotanicalWater" target="_blank" class="social-circle w-inline-block"><img src="{{ 'forest_facebook.svg' | asset_url }}" alt="facebook logo" class="f01_social_icon"></a>
+            <a href="https://www.linkedin.com/company/aquabotanical/" target="_blank" class="social-circle w-inline-block"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab81483725528ddfacc_linkedin.svg" alt="" class="f01_social_icon"></a>
+          </div>
+        </div>
+      </nav>
+      <div class="nav03_right">
+        <div class="nav03_menu_button-2 w-nav-button">
+          <div class="nav03_icon w-icon-nav-menu"></div>
+        </div>
+        <div class="subscribe-button-wrap nav">
+          <a href="/collections/try" class="solidbluebutton header outline w-button">{{ 'customers_account.A_9' | t }}</a>
+          <div class="div-block-143"></div>
+          <a data-w-id="2c866d2c-40f0-3cd3-2bf4-1a5885c69c7b" href="/collections/subscriptions" class="solidbluebutton w-button">{{ 'customers_account.A_10' | t }}</a>
+          <div class="div-block-156"></div>
+        </div>
+        <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="modal" data-wf-cart-query="" data-wf-page-link-href-prefix="" class="w-commerce-commercecartwrapper minicart">
+          <a href="#" data-node-type="commerce-cart-open-link" class="w-commerce-commercecartopenlink cart-button-2 w-inline-block"><img src="{{ 'shopping-bag-dark.svg' | asset_url }}" alt="shopping bag dark" class="cart-icon-2">
+            <div class="icon-nav-bg"></div>
+            <div style="display:none" data-count-hide-rule="empty" class="w-commerce-commercecartopenlinkcount cart-quantity-2" udy-el="cart-count">{{ cart.item_count }}</div>
+          </a>
+          <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal cart-wrapper">
+            <div data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container-2">
+              <div class="w-commerce-commercecartheader cart-header">
+                <h4 class="w-commerce-commercecartheading cart-header">{{ 'customers_account.H4_11' | t }}</h4>
+                <a href="#" data-node-type="commerce-cart-close-link" class="w-commerce-commercecartcloselink w-inline-block">
+                  <div class="close-popup"></div>
+                </a>
+              </div>
+              <div class="w-commerce-commercecartformwrapper">
+                <form data-node-type="commerce-cart-form" class="w-commerce-commercecartform {% if cart.item_count == 0 %}udesly-display-none{% endif %}">
+                  <ul role="list" class="mini-cart-list" udy-el="items-list">
+                    {% for item in cart.items %}<li class="mini-cart-list-item">
+                      <div class="mini-cart-image"><img src="{{ item | img_url: 'large' }}" loading="lazy" alt="{{ item.alt }}"></div>
+                      <div class="div-block-310">
+                        <div class="div-block-309">
+                          <a href="{{ item.product.url }}" class="product-list-title">{{ item.product.title }}</a>
+                          <div class="subscription"></div>
+                          <div class="product-price in-card">{{ item.price | money }}</div>
+                          <a href="/cart/change?line={{ forloop.index }}&amp;amp;quantity=0" class="remove-button w-inline-block" udy-el="remove-item">
+                            <div>{{ 'customers_account.DIV_12' | t }}</div>
+                          </a>
+                        </div>
+                        <div class="div-block-311">
+                          <a href="#" class="button-9 w-button" udy-el="quantity-minus">{{ 'customers_account.A_13' | t }}</a>
+                          <input class="udesly-fake-number-input quantity input" type="number" name="updates[{{ item.key }}]" id="updates_{{ item.key }}" data-line="{{ forloop.index }}" min="1" value="{{ item.quantity }}" data-inventory-policy="{{ item.variant.inventory_policy }}" data-inventory-quantity="{{ item.variant.inventory_quantity }}">
+                          <a href="#" class="button-10 w-button" udy-el="quantity-plus">{{ 'customers_account.A_14' | t }}</a>
+                        </div>
+                      </div>
+                    </li>{% endfor %}
+                  </ul>
+                  
+                  
+                  <div class="w-commerce-commercecartfooter {% if cart.item_count == 0 %}udesly-display-none{% endif %}" udy-el="cart-actions">
+                    <div class="w-commerce-commercecartlineitem">
+                      <div>{{ 'customers_account.DIV_15' | t }}</div>
+                      <div class="w-commerce-commercecartordervalue product-price product-page" udy-el="cart-total">{{ cart.total_price | money }}</div>
+                    </div>
+                    <div class="checkout-actions">
+                      <a href="/checkout" value="Continue to Checkout" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton solidbluebutton" data-loading-text="Hang Tight...">{{ 'customers_account.A_16' | t }}</a>
+                    </div>
+                  </div>
+                </form>
+                <div class="w-commerce-commercecartemptystate {% if cart.item_count != 0 %}udesly-display-none{% endif %}" udy-el="no-items-in-cart">
+                  <div>{{ 'customers_account.DIV_17' | t }}</div>
+                </div>
+                <div style="display:none" data-node-type="commerce-cart-error" class="w-commerce-commercecarterrorstate">
+                  <div class="w-cart-error-msg" data-w-cart-quantity-error="Product is not available in this quantity." data-w-cart-general-error="Something went wrong when adding this item to the cart." data-w-cart-checkout-error="Checkout is disabled on this site." data-w-cart-cart_order_min-error="Cart failed." data-w-cart-subscription_error-error="Cart failed.">{{ 'customers_account.DIV_18' | t }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <script id="mini-cart-template">
+          window.udeslyMiniCartTemplate = function(item) {
+            return `<li class="mini-cart-list-item" data-item-id="${item.id}">
+                      <div class="mini-cart-image"><img src="${item.image}" loading="lazy" alt=""></div>
+                      <div class="div-block-310">
+                        <div class="div-block-309">
+                          <a href="#" class="product-list-title">${item.product_title}</a>
+                          <div class="subscription"></div>
+                          <div class="product-price in-card">${item.price}</div>
+                          <a href="${item.remove}" class="remove-button w-inline-block" udy-el="remove-item">
+                            <div>Remove</div>
+                          </a>
+                        </div>
+                        <div class="div-block-311">
+                          <a href="#" class="button-9 w-button" udy-el="quantity-minus">-</a>
+                          <input class="udesly-fake-number-input quantity input" type="number" name="updates[${item.id}]" id="updates_${item.id}" data-line="${item.line}" min="1" value="${item.quantity}">
+                          <a href="#" class="button-10 w-button" udy-el="quantity-plus">+</a>
+                        </div>
+                      </div>
+                    </li>`
+          }
+          </script></div>
+      </div>
+    </div>
+  </div>
+  <div class="faq01 _100 wf-section">
+    <div class="faq01_title_wrap">
+      <p class="faq01_title">{{ 'customers_account.P_19' | t }}</p>
+      <h3 class="faq01_h3">{{ 'customers_account.H3_20' | t }}</h3>
+    </div>
+    <div class="account">
+      <div class="w-layout-grid grid-6">
+        <div class="account-info-container">
+          <div class="username---copy-this">{{ customer.name }}</div>
+          <div class="name-wrapper">
+            <div class="user-first-name---copy-this">{{ customer.first_name }}</div>
+            <div class="user-last-name---copy-this">{{ customer.last_name }}</div>
+          </div>
+          <div class="account-email---copy-this">{{ customer.email }}</div>
+          <address class="address">
+            <div class="default-address---copy-this">{{ customer.default_address | format_address }}</div>
+          </address>
+          <a href="/account/addresses" class="link-13">{{ 'customers_account.A_21' | t }}</a>
+          <a href="/account/logout" class="logout-link---copy-this">{{ 'customers_account.A_22' | t }}</a>
+        </div>
+        <div>
+          <div class="my-account-wrapper">
+            <div class="div-block-138">
+              <div class="order-numebr-row-header">
+                <div class="order-number-header">{{ 'customers_account.DIV_23' | t }}</div>
+              </div>
+              <div class="order-data-row-header">
+                <div class="order-date-header">{{ 'customers_account.DIV_24' | t }}</div>
+              </div>
+              <div class="payment-status-row-header">
+                <div class="payment-status-header">{{ 'customers_account.DIV_25' | t }}</div>
+              </div>
+              <div class="order-status-row-header">
+                <div class="fulfillment-status-header">{{ 'customers_account.DIV_26' | t }}</div>
+              </div>
+              <div class="order-total-row-header">
+                <div class="item-total-header">{{ 'customers_account.DIV_27' | t }}</div>
+              </div>
+            </div>
+            {% paginate customer.orders by settings.account_orders_limit %}<div bind="33225840-3f81-bf51-8567-c7916f9edd17" class="orders---copy-this w-dyn-list">
+              {% unless customer.orders.size == 0 %}<div bind="33225840-3f81-bf51-8567-c7916f9edd18" role="list" class="collection-list-9 w-dyn-items">
+                {% for order in customer.orders %}<div bind="33225840-3f81-bf51-8567-c7916f9edd19" role="listitem" class="address-collection-item w-dyn-item"></div>{% endfor %}
+              </div>
+              {% else %}<div bind="33225840-3f81-bf51-8567-c7916f9edd1a" class="empty-state-6 w-dyn-empty">
+                <div class="div-block-39"></div>
+              </div>{% endunless %}
+            </div>{% endpaginate %}
+            <div class="order-row---copy-this">
+              <div class="order-numebr-footer">
+                <a href="#" class="item-link---copy-this w-inline-block">
+                  <div>{{ 'customers_account.DIV_28' | t }}</div>
+                </a>
+              </div>
+              <div class="order-row-data">
+                <div format="%B %d, %Y" class="item-date---copy-this">{{ 'customers_account.DIV_29' | t }}</div>
+              </div>
+              <div class="order-row-data">
+                <div class="payment-status---copy-this">{{ 'customers_account.DIV_30' | t }}</div>
+              </div>
+              <div class="order-row-data">
+                <div class="fulfillment-status---copy-this">{{ 'customers_account.DIV_31' | t }}</div>
+              </div>
+              <div class="order-row-data-right">
+                <div class="item-total---copy-this">{{ 'customers_account.DIV_32' | t }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="faq01 _100 wf-section">
+    <div class="account">
+      <div class="dashboard-wrapper">
+        <div data-collapse="medium" data-animation="over-left" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+          <div class="dashboard-sidebar"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60dd67ac92a8920bb4535159_Evil%20Logo.svg" loading="lazy" alt="" class="logo-2">
+            <nav role="navigation" class="nav-menu-2 w-nav-menu">
+              <div class="card-wrapper">
+                <div class="nav-title-2">{{ 'customers_account.DIV_33' | t }}</div>
+                <div data-hover="" data-delay="0" class="dropdown-2 w-dropdown">
+                  <div class="dropdown-toggle-2 w-dropdown-toggle"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277b7402f36cfda5af935_Card%20Corp.png" loading="lazy" alt="" class="card-small">
+                    <div class="icon w-icon-dropdown-toggle"></div>
+                    <div>{{ 'customers_account.DIV_34' | t }}</div>
+                  </div>
+                  <nav class="dropdown-list-2 w-dropdown-list">
+                    <div>
+                      <a href="#" class="card-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277b7402f36cfda5af935_Card%20Corp.png" loading="lazy" alt="" class="small-card">
+                        <div class="large-detail">{{ 'customers_account.DIV_35' | t }}</div>
+                      </a>
+                      <a href="#" class="card-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277b7402f36cfda5af935_Card%20Corp.png" loading="lazy" alt="" class="small-card">
+                        <div class="large-detail">{{ 'customers_account.DIV_36' | t }}</div>
+                      </a>
+                      <a href="#" class="card-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277b7402f36cfda5af935_Card%20Corp.png" loading="lazy" alt="" class="small-card">
+                        <div class="large-detail">{{ 'customers_account.DIV_37' | t }}</div>
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div class="w-layout-grid navigation-grid">
+                <a href="#" class="dashboard-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e27777ad63e87c9cdc7588_Activity.svg" loading="lazy" alt="" class="dashboard-icon">
+                  <div>{{ 'customers_account.DIV_38' | t }}</div>
+                </a>
+                <a href="#" class="dashboard-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277794b6c7cb2bf3db2c1_Paper.svg" loading="lazy" alt="" class="dashboard-icon">
+                  <div>{{ 'customers_account.DIV_39' | t }}</div>
+                </a>
+                <a href="#" class="dashboard-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e27778365ff23a1f074bf4_Wallet.svg" loading="lazy" alt="" class="dashboard-icon">
+                  <div>{{ 'customers_account.DIV_40' | t }}</div>
+                </a>
+                <a href="#" class="dashboard-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277785067bd0be3d81745_Send.svg" loading="lazy" alt="" class="dashboard-icon">
+                  <div>{{ 'customers_account.DIV_41' | t }}</div>
+                </a>
+                <a href="#" class="dashboard-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277779563cc980000701c_Chart.svg" loading="lazy" alt="" class="dashboard-icon">
+                  <div>{{ 'customers_account.DIV_42' | t }}</div>
+                </a>
+              </div>
+              <a href="#" class="login-link w-inline-block"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e27778ae9d78f596894597_Logout.svg" loading="lazy" alt="" class="dashboard-icon">
+                <div>{{ 'customers_account.DIV_43' | t }}</div>
+              </a>
+            </nav>
+          </div>
+          <div class="menu-button-2 w-nav-button">
+            <div class="w-icon-nav-menu"></div>
+          </div>
+        </div>
+        <div class="dashboard-panel">
+          <div class="w-layout-grid dashboard-grid">
+            <div class="dashboard-block">
+              <div class="large-title">{{ 'customers_account.DIV_44' | t }}</div><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277b7402f36cfda5af935_Card%20Corp.png" loading="lazy" alt="" class="card">
+            </div>
+            <div class="dashboard-block">
+              <div class="large-title">{{ 'customers_account.DIV_45' | t }}</div>
+              <div class="balance-block">
+                <div class="title-wrapper-3">
+                  <div>{{ 'customers_account.DIV_46' | t }}</div>
+                  <a href="#" class="filter-wrap-large w-inline-block">
+                    <div>{{ 'customers_account.DIV_47' | t }}</div><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d3c407c2a9bb5248e_Arrow%20Dashboard.svg" loading="lazy" alt="" class="filter-icon">
+                  </a>
+                </div>
+                <div class="number-text">{{ 'customers_account.DIV_48' | t }}</div>
+                <div class="secure-wrapper"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d8cd2db628c1dc1b2_Shield%20Dashboard.svg" loading="lazy" alt="" class="shield">
+                  <div class="small-detail">{{ 'customers_account.DIV_49' | t }}</div>
+                </div>
+                <div class="balance-wrapper">
+                  <div class="detail-block">
+                    <div class="income-circle"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d79903bbe6eebd342_Arrow%20Dashboard%20Purple.svg" loading="lazy" alt=""></div>
+                    <div>
+                      <div class="large-detail">{{ 'customers_account.DIV_50' | t }}</div>
+                      <div class="small-detail">{{ 'customers_account.DIV_51' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="detail-block">
+                    <div class="expense-icon"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d365ff273d1074c52_Arrow%20Dashboard%20Orange.svg" loading="lazy" alt=""></div>
+                    <div>
+                      <div class="large-detail">{{ 'customers_account.DIV_52' | t }}</div>
+                      <div class="small-detail">{{ 'customers_account.DIV_53' | t }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-block">
+              <div class="title-wrapper-3">
+                <div class="medium-title">{{ 'customers_account.DIV_54' | t }}</div>
+                <a href="#" class="filter-wrap w-inline-block">
+                  <div>{{ 'customers_account.DIV_55' | t }}</div><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60dd65f48640fb0d1eb4bc0e_Filter%20Grey.svg" loading="lazy" alt="" class="filter-icon">
+                </a>
+              </div>
+              <div class="summary-details">
+                <div class="summary-income">
+                  <div class="income-text">{{ 'customers_account.DIV_56' | t }}</div><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d79903bbe6eebd342_Arrow%20Dashboard%20Purple.svg" loading="lazy" alt="" class="arrow">
+                </div>
+                <div class="summary-income">
+                  <div class="expense-text">{{ 'customers_account.DIV_57' | t }}</div><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d365ff273d1074c52_Arrow%20Dashboard%20Orange.svg" loading="lazy" alt="" class="arrow">
+                </div>
+              </div><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277afefdd507f5a604144_bar%20chart.svg" loading="lazy" alt="" class="chart-placeholder">
+              <div class="chart-details">
+                <div class="detail-block">
+                  <div class="income-bar-detail"></div>
+                  <div class="small-detail-2">{{ 'customers_account.DIV_58' | t }}</div>
+                </div>
+                <div class="detail-block">
+                  <div class="expense-bar-detail"></div>
+                  <div class="small-detail-2">{{ 'customers_account.DIV_59' | t }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-block">
+              <div class="title-wrapper-3">
+                <div class="medium-title">{{ 'customers_account.DIV_60' | t }}</div>
+                <a href="#" class="filter-wrap w-inline-block">
+                  <div>{{ 'customers_account.DIV_61' | t }}</div><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60dd65f48640fb0d1eb4bc0e_Filter%20Grey.svg" loading="lazy" alt="" class="filter-icon">
+                </a>
+              </div>
+              <div class="activities-wrapper">
+                <div class="activity-item">
+                  <div class="activity-user-wrapper">
+                    <div class="avatar-circle-small"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277a39137b9fad3acbb71_Avatar%20Dash%2001.png" loading="lazy" alt="" class="avatar"></div>
+                    <div>
+                      <div class="large-detail">{{ 'customers_account.DIV_62' | t }}</div>
+                      <div class="small-detail">{{ 'customers_account.DIV_63' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="price-wrapper">
+                    <div class="income-circle-small"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d79903bbe6eebd342_Arrow%20Dashboard%20Purple.svg" loading="lazy" alt=""></div>
+                    <div class="income-text">{{ 'customers_account.DIV_64' | t }}</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-user-wrapper">
+                    <div class="avatar-circle-small"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277a485c6ad5bdc3406af_Avatar%20Dash%2002.png" loading="lazy" alt="" class="avatar"></div>
+                    <div>
+                      <div class="large-detail">{{ 'customers_account.DIV_65' | t }}</div>
+                      <div class="small-detail">{{ 'customers_account.DIV_66' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="price-wrapper">
+                    <div class="expense-circle-small"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d365ff273d1074c52_Arrow%20Dashboard%20Orange.svg" loading="lazy" alt=""></div>
+                    <div class="expense-text">{{ 'customers_account.DIV_67' | t }}</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-user-wrapper">
+                    <div class="avatar-circle-small"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277a4d1a8bd6d8f074337_Avatar%20Dash%2003.png" loading="lazy" alt="" class="avatar"></div>
+                    <div>
+                      <div class="large-detail">{{ 'customers_account.DIV_68' | t }}</div>
+                      <div class="small-detail">{{ 'customers_account.DIV_69' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="price-wrapper">
+                    <div class="income-circle-small"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d79903bbe6eebd342_Arrow%20Dashboard%20Purple.svg" loading="lazy" alt=""></div>
+                    <div class="income-text">{{ 'customers_account.DIV_70' | t }}</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-user-wrapper">
+                    <div class="avatar-circle-small"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e277a38cd2dbd18a1dc204_Avatar%20Dash%2004.png" loading="lazy" alt="" class="avatar"></div>
+                    <div>
+                      <div class="large-detail">{{ 'customers_account.DIV_71' | t }}</div>
+                      <div class="small-detail">{{ 'customers_account.DIV_72' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="price-wrapper">
+                    <div class="expense-circle-small"><img src="https://uploads-ssl.webflow.com/60dd65f48640fb192cb4bbe8/60e2779d365ff273d1074c52_Arrow%20Dashboard%20Orange.svg" loading="lazy" alt=""></div>
+                    <div class="expense-text">{{ 'customers_account.DIV_73' | t }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div bind="936351d0-b2b0-ab2e-c8e5-7948d8285d5b" class="footer-section">
+    <div class="container-13"><img src="{{ 'AquaB-Logo-White.svg' | asset_url }}" loading="lazy" alt="" class="logo">
+      <div class="grey-divider"></div>
+      <div class="w-layout-grid footer-grid">
+        <div class="footer-link-column-2">
+          <div class="footer-link-title">{{ 'customers_account.DIV_74' | t }}</div>
+          <a href="/pages/faq" class="footer-link">{{ 'customers_account.A_75' | t }}</a>
+          <a href="/pages/become-a-wholesaler" class="footer-link">{{ 'customers_account.A_76' | t }}</a>
+          <a href="/pages/support" class="footer-link">{{ 'customers_account.A_77' | t }}</a>
+          <a href="/account/login" class="footer-link">{{ 'customers_account.A_78' | t }}</a>
+          <a href="/account/register" class="footer-link">{{ 'customers_account.A_79' | t }}</a>
+          <a href="/blogs/news" class="footer-link">{{ 'customers_account.A_80' | t }}</a>
+        </div>
+        <div class="footer-link-column-2">
+          <div class="footer-link-title">{{ 'customers_account.DIV_81' | t }}</div>
+          <a href="/pages/refund-policy" class="footer-link">{{ 'customers_account.A_82' | t }}</a>
+          <a href="/pages/environmental-policy" class="footer-link">{{ 'customers_account.A_83' | t }}</a>
+          <a href="/pages/privacy-policy" class="footer-link">{{ 'customers_account.A_84' | t }}</a>
+          <a href="/pages/terms-of-service" class="footer-link">{{ 'customers_account.A_85' | t }}</a>
+        </div>
+        <div class="footer-link-column">
+          <div class="footer-link-title">{{ 'customers_account.DIV_86' | t }}</div>
+          <a href="http://www.botanicalwater.org/" target="_blank" class="w-inline-block"><img src="{{ '5b22537925fc062336f52e88_BWF-Logo-White.png' | asset_url }}" loading="lazy" alt="botanical water foundation logo white" class="image-56"></a>
+        </div>
+        <div class="footer-link-column-2">
+          <div class="footer-link-title">{{ 'customers_account.DIV_87' | t }}</div>
+          <a href="#" class="footer-link">{{ 'customers_account.A_88' | t }}</a>
+          <div class="news-block w-form {% if form.posted_successfully? %}udy-form-posted-successfully{% endif %}">{% form 'customer' %}
+            <form id="wf-form-Subscribe" name="wf-form-Subscribe" method="post" class="form-2"><div udesly-add-class="form-2"></div><input type="email" class="email-field w-input" maxlength="256" name="contact[email]" placeholder="Email address" id="email" required=""><input type="submit" value="🚀" data-wait="Please wait..." data-w-id="73a00406-2a42-bb7c-c23e-feddbad776ac" class="newsletter-blue w-button">{% include 'general-forms', form %}</form>
+            <div class="success-message-3 w-form-done {% if form.posted_successfully? %}udy-form-success-message{% endif %}">
+              <div>{{ 'customers_account.DIV_89' | t }}</div>
+            </div>
+            <div class="error-message-3 w-form-fail {% if form.errors %}udy-form-has-errors{% endif %}">
+              <div>{% include 'form-errors' %}</div>
+            </div>
+          </div>{% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div bind="b89ebf75-64bc-30df-ee93-523f10b53aa4" class="footer-footer">
+    <div class="w-layout-grid footer1-bottom-grid">
+      <div id="w-node-b89ebf75-64bc-30df-ee93-523f10b53aa6-10b53aa4" class="div-block-18">
+        <div bind="dd65958b-0278-eb91-ce01-679143d7ff2b" class="footer1-bottom-link w-embed w-script">{{ 'customers_account.DIV_90' | t }}<script>document.write(new Date().getFullYear());</script>{{ 'customers_account.DIV_91' | t }}</div>
+        <div class="footer-spacer"></div>
+      </div>
+      <div class="div-block-18">
+        <div class="f01_social_wrap">
+          <a href="https://www.instagram.com/aqua_botanical/" target="_blank" class="social-circle w-inline-block"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab8148372fe82ddfad1_instagram.svg" alt="" class="f01_social_icon"></a>
+          <a href="https://www.facebook.com/AquaBotanicalWater" target="_blank" class="social-circle w-inline-block"><img src="{{ 'forest_facebook.svg' | asset_url }}" alt="facebook logo" class="f01_social_icon"></a>
+          <a href="https://www.linkedin.com/company/aquabotanical/" target="_blank" class="social-circle w-inline-block"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab81483725528ddfacc_linkedin.svg" alt="" class="f01_social_icon"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=61530d352ea7cd652527263a" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="{{ 'webflow.js' | asset_url }}" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+{% include 'notifications' %}{{ 'udesly-shopify.min.js' | asset_url | script_tag }}{{ 'option_selection.js' | shopify_asset_url | script_tag }}

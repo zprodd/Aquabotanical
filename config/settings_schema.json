@@ -1,0 +1,233 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "aqua-botanical-water 95",
+    "theme_author": "Akhil",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://www.yoursite.com",
+    "theme_support_email": "marshallakhil@gmail.com"
+  },
+  {
+    "name": "General Settings",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon Image",
+        "info": "Will be scaled down to 32x32px"
+      },
+      {
+        "type": "image_picker",
+        "id": "apple_touch_icon",
+        "label": "Apple touch icon image",
+        "info": "Will be scaled down to 120x120px"
+      }
+    ]
+  },
+  {
+    "name": "Product Page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_product_option_title",
+        "default": true,
+        "label": "Show option title"
+      },
+      {
+        "type": "range",
+        "id": "max_viewed_items_to_track",
+        "default": 12,
+        "min": 0,
+        "max": 50,
+        "label": "Max Viewed items to Track"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social sharing image"
+      },
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Image",
+        "info": "Shown when sharing a link on special media."
+      },
+      {
+        "type": "header",
+        "content": "Sharing Links"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter Link"
+      }
+    ]
+  },
+  {
+    "name": "Notifications",
+    "settings": [
+      {
+        "type": "text",
+        "id": "notifications_add_to_cart",
+        "label": "Add to cart notification text",
+        "default": "Added to cart!"
+      },
+      {
+        "type": "text",
+        "id": "notifications_remove_from_cart",
+        "label": "Remove from cart notification text",
+        "default": "Removed from cart!"
+      }
+    ]
+  },
+  {
+    "name": "Recommended Products",
+    "settings": [
+      {
+        "type": "range",
+        "id": "recommended_products_limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "label": "Recommended Products Limit",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "Pagination",
+    "settings": [
+      {
+        "type": "range",
+        "id": "blog_posts_limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "label": "Articles per Page (Blog page)",
+        "default": 5
+      },
+      {
+        "type": "range",
+        "id": "collections_limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "label": "Collections per page (Collection List page)",
+        "default": 6
+      },
+      {
+        "type": "range",
+        "id": "collection_products_limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "label": "Products per Page (Collection page)",
+        "default": 6
+      },
+      {
+        "type": "range",
+        "id": "addresses_limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "label": "Addresses per Page (Addresses page)",
+        "default": 6
+      },
+      {
+        "type": "range",
+        "id": "account_orders_limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "label": "Orders Per Page (Account page)",
+        "default": 6
+      },
+      {
+        "type": "range",
+        "id": "search_results_limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "label": "Search Results per Page (Search page)",
+        "default": 6
+      }
+    ]
+  },
+  {
+    "name": "related articles",
+    "settings": [
+      {
+        "type": "blog",
+        "id": "related_articles_blog",
+        "label": "related articles blog"
+      },
+      {
+        "type": "range",
+        "id": "related_articles_blog_limit",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "default": 6,
+        "label": "related articles number of articles"
+      },
+      {
+        "type": "select",
+        "id": "related_articles_blog_sort",
+        "label": "related articles order",
+        "options": [
+          {
+            "value": "published_at",
+            "label": "Date"
+          },
+          {
+            "value": "title",
+            "label": "Title"
+          }
+        ],
+        "default": "published_at"
+      },
+      {
+        "type": "checkbox",
+        "id": "related_articles_blog_reverse",
+        "label": "Reverse Order?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "related_articles_blog_enable_filter",
+        "label": "Filter By Tag?",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "related_articles_blog_tag",
+        "label": "Tag to filter",
+        "default": "Tag",
+        "placeholder": "Tag"
+      }
+    ]
+  },
+  {
+    "name": "related",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "related_collection",
+        "label": "related collection"
+      },
+      {
+        "type": "range",
+        "id": "related_collection_limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 6,
+        "label": "related collection limit"
+      }
+    ]
+  }
+]

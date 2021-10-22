@@ -1,0 +1,115 @@
+
+
+      <div class="blog-container">
+        <div class="w-layout-grid blog-grid-2">
+          <a bind="8bb42c00-3572-bccc-3f1d-25e79f28b7b9" href="{{ section.settings.card1 }}" class="blog-card w-inline-block">
+            <div class="blog-image-2"><img src="{{ 'How-It-is-made.jpg' | asset_url }}" loading="lazy" alt="people in field" class="image-full">
+              <div class="date-block"><img src="{{ 'icons---_Delivery-copy.svg' | asset_url }}" loading="lazy" alt="drop icon "></div>
+            </div>
+            <div class="blog-content-2">
+              <div class="title _8-bottom-margin">{{ section.settings.title1 }}</div>
+              <h4 class="h04_h1">How it is <span class="text-span-7">Made</span></h4>
+              <p><strong>Made from 100% Fruit and Vegetables.</strong> <br>Fruit and vegetables naturally contain water. When fruit and vegetables are pressed to extract their juices to make products, a large amount of water is produced in parallel. AquaBotanical takes this water (known as ‘evaporative condensate’) and turns it into water using our patented technology.</p>
+            </div>
+          </a>
+          <a bind="8bb42c00-3572-bccc-3f1d-25e79f28b7c8" href="{{ section.settings.card2 }}" class="blog-card w-inline-block">
+            <div class="blog-image-2"><img src="{{ 'Direct-To-Your-door.jpg' | asset_url }}" loading="lazy" bind="8bb42c00-3572-bccc-3f1d-25e79f28b7ca" alt="water in basket" class="image-full">
+              <div class="date-block"><img src="{{ 'icons---_Delivery.svg' | asset_url }}" loading="lazy" alt="delivery icon"></div>
+            </div>
+            <div class="blog-content-2">
+              <div bind="bebf6850-c86b-ed66-3ce8-a70dd5c0f4fb" class="title _8-bottom-margin">{{ section.settings.title2 }}</div>
+              <h4 class="h04_h1">Direct to Your <span class="text-span-6">Door</span> </h4>
+              <p>Get AquaBotanical water conveniently and safely delivered to your door.<br></p>
+              <div class="lnd_check_wrap"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab81483726dfcddf9f3_check-circle.svg" width="24" alt="" class="check-icon">
+                <p class="check-point">Fast Delivery On All Metro Orders<br></p>
+              </div>
+              <div class="lnd_check_wrap"><img src="https://uploads-ssl.webflow.com/608a9ab81483724b68ddf9bb/608a9ab81483726dfcddf9f3_check-circle.svg" width="24" alt="" class="check-icon">
+                <p class="check-point">Just subscribe and start saving!<br></p>
+              </div>
+            </div>
+          </a>
+          <a bind="7a4c4fd8-506d-1ee6-2170-4d9bd0a9ce10" href="{{ section.settings.card3 }}" class="blog-card w-inline-block">
+            <div class="blog-image-2"><img src="{{ 'Eco-Friendly.jpg' | asset_url }}" loading="lazy" alt="eco friendly bottles" class="image-full">
+              <div class="date-block"><img src="{{ 'icons---_Environment.svg' | asset_url }}" loading="lazy" alt="leaf icon"></div>
+            </div>
+            <div class="blog-content-2">
+              <div class="title _8-bottom-margin">We <strong class="bold-text-2">❤️</strong> our world</div>
+              <h4 class="h04_h1 left">Eco-Friendly <span class="text-span-6">Packaging</span> </h4>
+              <p bind="b5c6502f-6395-a0d4-c232-f862190be79a">The benefits of glass bottles are clear: it’s <strong>sustainable, 100% recyclable</strong>, and <strong>doesn’t contain nasty chemicals</strong>. Ensuring that the water inside the glass bottle keeps it’s strength, purity, aroma and flavour.</p>
+            </div>
+          </a>
+          <a bind="cdfdeecb-0d1d-48d3-9cb1-f12b67cb7b27" href="{{ section.settings.card4 }}" class="blog-card w-inline-block">
+            <div class="blog-image-2"><img src="{{ 'Awards-2.jpg' | asset_url }}" loading="lazy" alt="" class="image-full">
+              <div class="date-block"><img src="{{ 'icons---_Delivery-copy-2.svg' | asset_url }}" loading="lazy" alt="trophy icon"></div>
+            </div>
+            <div class="blog-content-2">
+              <div class="title _8-bottom-margin">{{ section.settings.title4 }}</div>
+              <h4 class="h04_h1">Our <span class="text-span-6">Awards</span></h4>
+              <div class="w-layout-grid grid-2">
+                <div class="tag-link">
+                  <div>Food &amp; Beverage Industry Awards Winner</div>
+                </div>
+                <div class="tag-link">
+                  <div>Australian Institute of Food Science &amp; Technology</div>
+                </div>
+                <div class="tag-link">
+                  <div>Global Bottled Water Awards</div>
+                </div>
+                <div class="tag-link">
+                  <div>Zeneth Innobev Awards</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","blog-section-2");</script>
+
+{% schema %}
+{
+  "name": "blog",
+  "class": "blog-section-2",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Title1",
+      "default": "the process"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "Title2",
+      "default": "Speedy delivery Available 📦 "
+    },
+    {
+      "type": "text",
+      "id": "title4",
+      "label": "Title4",
+      "default": "WE'RE A BIG player"
+    },
+    {
+      "type": "url",
+      "id": "card1",
+      "label": "Card1"
+    },
+    {
+      "type": "url",
+      "id": "card2",
+      "label": "Card2"
+    },
+    {
+      "type": "url",
+      "id": "card3",
+      "label": "Card3"
+    },
+    {
+      "type": "url",
+      "id": "card4",
+      "label": "Card4"
+    }
+  ]
+}
+{% endschema %}

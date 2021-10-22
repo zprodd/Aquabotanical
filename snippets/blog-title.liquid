@@ -1,0 +1,7 @@
+{%- assign blog_title = blog.title -%}
+
+  {% if current_tags %}
+    {% capture blog_title %}{{ blog.title | link_to: blog.url }} | {{ current_tags.first }}{% endcapture %}
+  {% endif %}
+
+{{ blog_title }}
